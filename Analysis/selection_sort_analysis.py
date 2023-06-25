@@ -13,26 +13,21 @@ def selection_sort(arr):
     return arr
 
 
-n = [0, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000]
+n = [0, 100, 500, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000]
 time_taken = []
 
+print("No. of elements:\tTime taken in milliseconds")
 for i in n:
     arr = [random.randint(0, 1000000) for i in range(i)]
     start = time.time()
     selection_sort(arr)
     end = time.time()
     time_taken.append((end-start)*1000)
-
-
-print("Selection Sort")
-print("No. of elements:\tTime taken in milliseconds")
-for i in range(len(n)):
-    print(n[i], "\t\t\t", time_taken[i])
-
+    print(i, "\t\t\t", (end-start)*1000)
 
 plt.title("Selection Sort")
 plt.xlabel("Number of elements")
-plt.xlim(0, 5500)
+plt.xlim(0, 10000)
 plt.ylabel("Time taken in milliseconds(ms)")
 plt.plot(n, time_taken)
 plt.show()
