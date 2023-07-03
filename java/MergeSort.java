@@ -20,8 +20,8 @@ class MergeSort {
                 merged.add(arr2.remove(0));
             }
         }
-        while (arr1.size() > 0) merged.add(arr1.remove(0));
-        while (arr2.size() > 0) merged.add(arr2.remove(0));
+        merged.addAll(arr1);
+        merged.addAll(arr2);
         return merged;
     }
     public static ArrayList<Integer> readFromFile() {
