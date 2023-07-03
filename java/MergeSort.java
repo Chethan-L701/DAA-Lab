@@ -13,7 +13,7 @@ class MergeSort {
     public static ArrayList<Integer> merge(ArrayList<Integer> arr1, ArrayList<Integer> arr2) {
         ArrayList<Integer> merged = new ArrayList<>();
         while (arr1.size() > 0 && arr2.size() > 0) {
-            if (arr1.get(0) < arr2.get(0)) merged.add(arr.remove(0));
+            if (arr1.get(0) < arr2.get(0)) merged.add(arr1.remove(0));
             else if (arr1.get(0) > arr2.get(0)) merged.add(arr2.remove(0));
             else {
                 merged.add(arr1.remove(0));
